@@ -75,3 +75,71 @@ print(py > dr)
 
 #13
 print('on' in pyt and 'on' in dra) 
+
+#14
+sentence = 'I hope this course is not full of jargon'
+print('jargon' in sentence)
+
+#15
+print('on' not in pyt and 'on' not in dra) 
+
+#16
+length = len('python')
+print(length)
+float_length = float(length)
+print(float_length)
+string_length = str(float_length)
+print(string_length)
+
+#17
+number = int(input("Number: "))
+if number % 2 == 0:
+    print('Even')
+else:
+    print("Odd")
+
+#18
+num1 = 7
+num2 = 3
+if num1 // num2 == int(2.7):
+    print(True)
+else:
+    print(False)
+
+#19
+a = 10
+b = '10'
+if type(b) == type(a):
+    print('Equal')
+else:
+    print("Not equal")
+
+#20
+numb = '9.8'
+if int(float(numb)) == 10:
+    print(True)
+else:
+    print(False)
+
+#21
+hours = int(input("Enter hours: "))
+rate_per_hour = int(input('Enter rate per hour: '))
+weekly_earnings = hours * rate_per_hour
+print(f"Your weeklyt hours are: {weekly_earnings}")
+
+#22
+years = int(input("Enter the number of years you have lived: "))
+seconds = years * 3600
+print(f'You have lived for {seconds} seconds.')
+
+#23
+for row in range(1, 6):
+    for col in range(1, 6):
+        if col == 1:
+            print(row, end=" ")
+        elif col == 2:
+            print(1, end=' ')
+        elif col > 2:
+            num = col - 2
+            print(row ** num, end=' ')
+    print() 
