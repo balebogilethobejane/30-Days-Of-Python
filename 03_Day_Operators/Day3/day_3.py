@@ -68,5 +68,10 @@ print(y_)
 #12
 py = len('python')
 dr = len('dragon')
+pyt = 'python'
+dra = 'dragon'
 
 print(py > dr)
+
+#13
+print('on' in pyt and 'on' in dra) 
