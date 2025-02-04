@@ -1,27 +1,6 @@
 # Introduction
 # Day 1 - 30DaysOfPython Challenge
 
-print(3 + 2)   # addition(+)
-print(3 - 2)   # subtraction(-)
-print(3 * 2)   # multiplication(*)
-print(3 / 2)   # division(/)
-print(3 ** 2)  # exponential(**)
-print(3 % 2)   # modulus(%)
-print(3 // 2)  # Floor division operator(//)
-
-# Checking data types
-
-print(type(10))                  # Int
-print(type(3.14))                # Float
-print(type(1 + 3j))              # Complex
-print(type('Asabeneh'))          # String
-print(type([1, 2, 3]))           # List
-print(type({'name':'Asabeneh'})) # Dictionary
-print(type({9.8, 3.14, 2.7}))    # Set
-print(type((9.8, 3.14, 2.7)))    # Tuple
-print(type(3 == 3))              # Bool
-print(type(3 >= 3))              # Bool
-
 
 print(3+4)
 print(3-4)
@@ -38,11 +17,26 @@ print("Thobejane")
 print("South Africa")
 print("Iam enjoying 30 days of python")
 
-print(type(10))                  # Int
-print(type(9.8))                # Float
-print(type (3.14))              # Complex
-print(type(['Asabeneh','Python','Finland']))          # String
-print(type(4 -4j))           # List
-print(type('Lebo')) # Dictionary
-print(type('Thobejane'))    # Set
+print(type(10))                  
+print(type(9.8))                
+print(type (3.14))              
+print(type(['Asabeneh','Python','Finland']))        
+print(type(4 -4j))           
+print(type('Lebo')) 
+print(type('Thobejane'))    
 print(type(('South Africa'))) 
+
+print("integer: 1")
+print("float: 1,1")
+print("complex: f1 + 2")
+print("string: Lebo")
+print("boolean: False")
+print('List:[1,2,3,4,"Lebo"]')
+print('Dictionary:{"name":"Lebo","age":24}')
+print('set:{"apple", "banana", "cherry"}')
+print('tuple:("Lebo","Thobejane")')
+
+x= (2-3)** 2
+y =(10 -8)** 2
+distance = (x + y) ** 0.5
+print (distance)
