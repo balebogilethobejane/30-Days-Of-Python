@@ -21,3 +21,28 @@ print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 print(type(3 == 3))              # Bool
 print(type(3 >= 3))              # Bool
+
+
+print(3+4)
+print(3-4)
+print(3*4)
+print(3%4)
+print(3%4)
+print(3/4)
+print(3**4)
+print(3//4)
+
+
+print("Lebo")
+print("Thobejane")
+print("South Africa")
+print("Iam enjoying 30 days of python")
+
+print(type(10))                  # Int
+print(type(9.8))                # Float
+print(type (3.14))              # Complex
+print(type(['Asabeneh','Python','Finland']))          # String
+print(type(4 -4j))           # List
+print(type('Lebo')) # Dictionary
+print(type('Thobejane'))    # Set
+print(type(('South Africa'))) 
