@@ -111,3 +111,68 @@ full_stack = joined_list.copy()
 full_stack.insert(full_stack.index("Redux") + 1, "Python")
 full_stack.insert(full_stack.index("Python") + 1, "SQL")
 print(full_stack)
+
+#Level 2
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+# Sort the list
+ages.sort()
+print("Sorted ages:", ages)
+
+# Find the min and max age
+min_age = min(ages)
+max_age = max(ages)
+print("Min age:", min_age)
+print("Max age:", max_age)
+
+# Add the min age and the max age again to the list
+ages.append(min_age)
+ages.append(max_age)
+print("Ages with min/max added:", ages)
+
+# Find the median age
+ages.sort() # Important to sort again after adding min/max
+n = len(ages)
+if n % 2 == 0:
+    median_age = (ages[n//2 - 1] + ages[n//2]) / 2
+else:
+    median_age = ages[n//2]
+print("Median age:", median_age)
+
+# Find the average age
+average_age = sum(ages) / n
+print("Average age:", average_age)
+
+# Find the range of the ages
+age_range = max_age - min_age
+print("Age range:", age_range)
+
+# Compare the value of (min - average) and (max - average), use abs() method
+min_avg_diff = abs(min_age - average_age)
+max_avg_diff = abs(max_age - average_age)
+print("Absolute difference (min - average):", min_avg_diff)
+print("Absolute difference (max - average):", max_avg_diff)
+
+# --- Countries List ---
+countries = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+
+# Find the middle country(ies)
+n_countries = len(countries)
+if n_countries % 2 == 0:
+    middle_countries = countries[n_countries//2 - 1 : n_countries//2 + 1]
+else:
+    middle_countries = [countries[n_countries//2]]
+print("Middle country(ies):", middle_countries)
+
+# Divide the countries list into two equal lists
+first_half = countries[:(n_countries + 1) // 2]
+second_half = countries[(n_countries + 1) // 2:]
+print("First half of countries:", first_half)
+print("Second half of countries:", second_half)
+
+# Unpack the first three countries and the rest as scandic countries.
+china, russia, usa, *scandic = countries
+print("China:", china)
+print("Russia:", russia)
+print("USA:", usa)
+print("Scandic countries:", scandic)

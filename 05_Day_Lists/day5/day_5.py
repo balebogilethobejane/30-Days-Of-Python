@@ -156,3 +156,13 @@ countries = ['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and B
              'Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu','Vatican City','Venezuela','Vietnam', 'Yemen','Zambia','Zimbabwe']
 
 #3. half
+lst_1 = []
+lst_2 = []
+equal_list = len(countries) // 2
+if equal_list % 2 == 0:
+    lst_1[equal_list]
+    lst_2[equal_list - 1]
+
+#unpacking
+lst_ = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+asia, russ, state, * scandic = lst_
