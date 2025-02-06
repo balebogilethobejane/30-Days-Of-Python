@@ -63,3 +63,8 @@ print(lst_len > set_len)
 
 #3. split method
 sente = 'I am a teacher and I love to inspire and teach people'
+splits_sentence = sente.split()
+unique_words = set(splits_sentence)
+print(unique_words)
+words = len(unique_words)
+print(words)
