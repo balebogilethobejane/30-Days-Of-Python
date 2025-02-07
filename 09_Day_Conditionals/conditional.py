@@ -1,4 +1,6 @@
+
 #day 9. 
+
 #level 1
 #1. getting user input, checking whether they are old enough to drive or not
 age = int(input('Enter your age: '))
