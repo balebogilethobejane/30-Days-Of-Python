@@ -87,12 +87,16 @@ print(f'The sum of all evens is {even_num}. And the sum of all odds is {odd_num}
 
 #level 3
 #1. looping through the countries and extract all 
-# import countries
-# country_lst = []
-# for country in countries:
-#     if 'land' in country:
-#         country_lst.append(country)
-#     print(country_lst)
+import sys
+sys.path.append('/c:/Users/makho/Documents/My_projects/30-Days-Of-Python/data')
+
+import countries
+import countries_data
+country_lst = []
+for country in countries:
+    if 'land' in country:
+        country_lst.append(country)
+print(country_lst)
  
 #2. reversing the orderr using loop
 fruit_lst = ['banana', 'orange', 'mango', 'lemon']
@@ -100,7 +104,30 @@ for fruit in fruit_lst:
    sort_lst = sorted(fruit_lst, reverse=True)
 print(sort_lst)
 
-#3. 
+#3. accessing file
+#i. total number of language
+# Total number of languages
+languages = set()
+for country in countries_data.countries:
+    for language in country['languages']:
+        languages.add(language)
+print(f'Total number of languages: {len(languages)}')
 
+# Ten most spoken languages
+language_count = {}
+for country in countries_data.countries:
+    for language in country['languages']:
+        if language in language_count:
+            language_count[language] += 1
+        else:
+            language_count[language] = 1
+most_spoken_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)[:10]
+print('Ten most spoken languages:')
+for language, count in most_spoken_languages:
+    print(f'{language}: {count}')
 
-
+# Ten most populated countries
+most_populated_countries = sorted(countries_data.countries, key=lambda x: x['population'], reverse=True)[:10]
+print('Ten most populated countries:')
+for country in most_populated_countries:
+    print(f"{country['name']}: {country['population']}")
