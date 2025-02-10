@@ -45,3 +45,42 @@ print("Coding" in "Coding For All")
 text= "Coding For All"
 new_text = (text.replace("Coding For All","python"))
 print(new_text)
+
+#12
+text= "Coding For All"
+new_text = (text.replace("Coding","python"))
+print(new_text)
+
+#13
+text = "Coding For All"
+split_text = (text.split())
+print(split_text)
+
+#14
+text = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" 
+split_text = (text.split(","))
+print(split_text)
+
+#15
+text = "Coding For All"
+print(text[0])
+
+#16
+text = "Coding For All"
+print(text[-1])
+
+#17
+text = "Coding For All"
+print(text[10])
+
+#18
+text = "Python For Everyone"
+acronym =  text.split()[0][0] + text.split()[1][0] + text.split()[2][0]
+print(acronym)
+
+#19
+text = "Coding For All"
+acronym =  text.split()[0][0] + text.split()[1][0] + text.split()[2][0]
+print(acronym)
+
+
