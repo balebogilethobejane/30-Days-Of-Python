@@ -83,4 +83,84 @@ text = "Coding For All"
 acronym =  text.split()[0][0] + text.split()[1][0] + text.split()[2][0]
 print(acronym)
 
+#20
+text = "Coding For All"
+position =text.index('C')
+print(position)
 
+#21
+text = "Coding For All"
+position =text.index('F')
+print(position)
+
+#22
+text = "Coding For All"
+position =text.rfind('l')
+print(position)
+
+#23
+text = 'You cannot end a sentence with because because because is a conjunction'
+position =text.index('because')
+print(position)
+
+#24
+text = 'You cannot end a sentence with because because because is a conjunction'
+position =text.rfind('because')
+print(position)
+
+#25
+text = 'You cannot end a sentence with because because because is a conjunction'
+sliced_text =text[31:54]
+print(sliced_text)
+
+#26
+text = 'You cannot end a sentence with because because because is a conjunction'
+position =text.index('because')
+print(position)
+
+#27
+text = 'You cannot end a sentence with because because because is a conjunction'
+sliced_text =text[31:54]
+print(sliced_text)
+
+#28
+
+#29
+
+#30
+
+#31
+'''30DaysOfPython'''
+
+
+#32
+libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+
+results = '#'.join(libraries)
+print(results)
+
+#33
+sentence = "I am enjoying this challenge\nI just wonder what is next."
+print(sentence)
+
+#34
+header = "Name\tAge\tCountry\tCity"
+data = "Asabeneh\t250\tFinland\tHelsinki"
+print(header)
+print(data)
+
+#35
+radius = 10
+area = 3.14 * radius ** 2
+print(f"The area of a circle with radius {radius} is {area} meters square.")
+
+#36
+a = 8
+b = 6
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b:.2f}")  
+print(f"{a} % {b} = {a % b}")
+print(f"{a} // {b} = {a // b}")
+print(f"{a} ** {b} = {a ** b}")
