@@ -75,3 +75,15 @@ def reverse_list(*arr):
 print(reverse_list('E', 'D', 'C', 'B', 'A'))
 
 # 10. A Function that takes a list as parameter and returns a capitalized list
+def capitalize_list_items(*lst):
+    capital_lst = []
+    for i in lst:
+        capital_lst.append(i.capitalize())
+    return capital_lst
+print(capitalize_list_items("mr","mrs","miss", 'doc'))
+
+#11. Declaring a function tha takes a list and an item parameters, returning a list with the items addedd at the end.
+def add_items(lst_, n):
+    food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+    for item in food_staff
+
