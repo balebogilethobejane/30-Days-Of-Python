@@ -84,6 +84,74 @@ print(capitalize_list_items("mr","mrs","miss", 'doc'))
 
 #11. Declaring a function tha takes a list and an item parameters, returning a list with the items addedd at the end.
 def add_items(lst_, n):
-    food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
-    for item in food_staff
+    my_lst = lst_[:]
+    my_lst.append(n)
+    return my_lst
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print(add_items(food_staff, 'Meat')) 
 
+#12. Declaring a function that takes a list and an item parameters and returning a list with removed item
+def remove_item(lst, item):
+    new_lst = lst[:]
+    new_lst.remove(item)
+    return new_lst
+numbers = [2, 3, 7, 9]
+print(remove_item(numbers, 3)) 
+
+#13. Declaring a function that takes a number parameter and adds all the numbers in that range
+def sum_of_numbers(n):
+    y=0
+    for i in range(1,n+1):
+        y += i
+    return y
+print(sum_of_numbers(10))
+
+#14. Declaring a function that takes a number parameter and adds all the odd numbers in that range 
+def sum_of_odds(n):
+    num = 0
+    for i in range(n+1):
+        if i % 2 != 0:
+            num += i
+    return num
+print(sum_of_odds(10))
+
+#15. Declaring a function that takes a number parameter and adds all the even numbers in that - range
+def sum_of_even(n):
+    num = 0
+    if n <= 0:
+        for i in range(n, 0):
+            if i % 2 == 0:
+                num += i
+        return num
+    else:
+        for i in range(1, n +1):
+            if i % 2 == 0:
+                num += i
+        return num
+print(sum_of_even(-10))
+
+#Level 2
+#1. declaring a function that takes positive int, and counts the number of even numbers and odd numbers
+def even_and_odd(n):
+    even = 0
+    odd = 0
+    if n < 0:
+        return
+    else:
+        for num in range(n+1):
+            if num % 2 == 0:
+                even += 1
+            elif num % 2 != 0:
+                odd += 1
+        return f"The number of evens are {even} \nThe number of odds are {odd}"
+print(even_and_odd(100))
+
+#2. Factorial function that takes in a whole number and return a factorial of that number
+def factorial(number):
+    if number == 1 or number == 0:
+        return
+    y = 1
+    for i in range(1, number +1):
+        y *= i
+    return y
+print(factorial(5))
