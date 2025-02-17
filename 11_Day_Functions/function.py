@@ -155,3 +155,7 @@ def factorial(number):
         y *= i
     return y
 print(factorial(5))
+
+#3. declaring a function that checks if it is empty or not
+def is_empty(n):
+    pass
