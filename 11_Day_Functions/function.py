@@ -158,4 +158,107 @@ print(factorial(5))
 
 #3. declaring a function that checks if it is empty or not
 def is_empty(n):
-    pass
+    if not n:
+        return False
+    else:
+        return True
+print(is_empty([]))   
+
+#4. Different functions that take lists, They should calculate mean, median,mode, range, variance, std
+#mean
+def calculate_mean(lst):
+    if not lst:
+        return False
+    else: 
+        sum_num = sum(lst)
+        length_of_lst = len(lst)
+        mean = sum_num / length_of_lst
+    return mean
+print(calculate_mean([1, 2, 2, 3, 4, 5]))
+
+#median
+def calculate_median(lsts):
+    if not lsts:
+        return False
+    sorted_lst = sorted(lsts)
+    length_lst = len(sorted_lst)
+
+    if length_lst % 2 == 0:
+        mid_1 = sorted_lst[length_lst // 2 -1]
+        mid_2 = sorted_lst[length_lst // 2]
+        median = (mid_1 + mid_2) / 2
+    else:
+        median = sorted_lst[length_lst // 2]
+    return median
+print(calculate_median([1, 2, 2, 3, 4, 5,6]))
+
+#Mode
+def calculate_mode(lst):
+    if not lst:
+        return False
+    more_count = 0
+    mode = []
+    for num in lst:
+        count = 0
+        for num2 in lst:
+            if num == num2:
+                count += 1
+        if count > more_count:
+            mode = [num]
+            more_count = count
+        elif count == more_count and num not in mode:
+            mode.append(num)
+    if more_count == 1 and len(lst) > 1:
+        return "No mode"
+    return mode
+print(calculate_mode([1, 2, 2, 3, 3, 3, 3, 4, 5, 6]))
+
+#Range
+def calculate_range(lst):
+    if not lst:
+        return True
+    min_num = min(lst)
+    max_num = max(lst)
+    range_num = max_num - min_num
+    return range_num
+print(calculate_range([1, 2, 2, 3, 4, 5,10]))
+
+#variance
+def calculate_variance(lst):
+    if not lst:
+        return False
+    mn = calculate_mean(lst)
+    sqr_diff = []
+    for i in lst:
+        sqr_diff.append((i - mn) **2)
+    sum_sqr_diff = sum(sqr_diff)
+    variance = sum_sqr_diff / (len(lst) - 1)
+    return round(variance,2)
+print(calculate_variance([1, 2, 2, 3, 4, 5,10]))
+
+#Standard Deviation
+def calculate_std(lst):
+    if not lst:
+        return False
+    varience = calculate_variance(lst)
+    
+    std = varience ** 0.5
+    return round(std, 2)
+print(calculate_std([1, 2, 2, 3, 4, 5,10]))
+
+#LEVEL 3
+#1. function that check if numbers are prime numbers
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+print(is_prime(5))
+
+#2. function that checks all unique item
+def unique_items(unique_lst):
+    
+    return sorted(set(unique_lst))
+print(unique_items([1, 2, 2, 3, 4, 4, 5]))
