@@ -262,3 +262,44 @@ def unique_items(unique_lst):
     
     return sorted(set(unique_lst))
 print(unique_items([1, 2, 2, 3, 4, 4, 5]))
+
+#3. A function which checks if all the items of the list are of the same data type
+def data_type(data_lst):
+    if not data_lst:
+        return True
+    same_type = {}
+    for item in data_lst:
+        if type(item) not in same_type:
+            same_type[type(item)] = [item]
+        else:
+            same_type[type(item)].append(item)
+    return same_type
+
+print(data_type([1, 2.6, "hello", 4.5, True, 6, False]))
+
+#4. A function that checks if provided viariables are valid in python
+def valid_variable(variable_name):
+    keywords = ["False", "None", "True", "and", "as", "assert", "async",
+                "await", "break", "class", "continue", "def", "del", "elif",
+                "else", "except", "finally", "for", "from", "global", "if",
+                "import", "in", "is", "lambda", "nonlocal", "not", "or",
+                "pass", "raise", "return", "try", "while", "with", "yield"]
+    if variable_name in keywords:
+        return False
+
+    if variable_name and '0' <= variable_name[0] <= '9':  
+        return False
+
+    for char in variable_name:
+        if not ('a' <= char <= 'z' or 'A' <= char <= 'Z' or '0' <= char <= '9' or char == '_'):
+            return False
+
+    if not variable_name:
+        return False
+
+    return True
+print(valid_variable("for"))   
+
+#5. creating functions 
+#A function that returns top 20 descenfing order
+#
