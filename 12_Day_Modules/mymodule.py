@@ -9,4 +9,7 @@ def random_user_id():
     return user_id
 print(random_user_id())
 
-#2. 
+#2. modifying the previous task.
+def user_id_gen_by_user():
+    num_char = int(input("Enter number of Characters: "))
+    num_ID = int(input("Enter number of ID: "))
