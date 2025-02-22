@@ -112,3 +112,4 @@ print(max(ages))
 print(min(ages) + max(ages))
 print(sum(ages) /len(ages))
 print (max(ages) - min(ages))
+
