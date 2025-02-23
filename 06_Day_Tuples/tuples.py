@@ -34,4 +34,10 @@ food_stuff_ls = list(food_stuff_tp)
 middle_items = food_stuff_ls [-4:-1]
 first_three = food_stuff_ls [0:3]
 last_three = food_stuff_ls [3:0]
-print(last_three)
+ 
+del food_stuff_tp
+
+"Ham" in food_stuff_ls
+
+nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
+"Estonia" in nordic_countries and "Iceland" in nordic_countries
