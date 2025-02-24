@@ -34,8 +34,8 @@ def rgb_color_gen():
     return (r,g,b)
 print(rgb_color_gen())
 
-LEVEL 2:
-1. A function that returns number of hexadecimal colors in an array.
+#LEVEL 2:
+#1. A function that returns number of hexadecimal colors in an array.
 def list_of_hexa_colors():
     hexa_digit = list(string.digits)
     hexa_alpha = list(string.ascii_letters)[:6]
@@ -90,5 +90,8 @@ print(shuffle_list([1,2,3,4,5,6,7]))
 #2. A function that returns an array of seven random numbers in a range of 0-9, Numbers must be uniques:
 def random_unique_number():
     num_arr = []
-    for i in range(0, 10):
-        random.shuffle(i)
+    for i in range(10):
+        num_arr.append(i)
+        random.shuffle(num_arr)
+    return num_arr[:7]
+print(random_unique_number())
