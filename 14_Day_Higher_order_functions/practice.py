@@ -92,3 +92,72 @@ def print_full_name(first_name, last_name, country):
         first_name, last_name, country))
 
 print_full_name("Asabeneh", "Yetayeh",'Finland')
+
+#multiple decorators to a single function
+def uppercase_decorators(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+def split_string_decorator(function):
+    def wrapper():
+        func = function()
+        splitted_string = func.split()
+        return splitted_string
+    return wrapper
+
+@split_string_decorator
+@uppercase_decorators
+def greeting():
+    return "Welcome to Python"
+print(greeting())
+
+def decorator_with_parameters(function):
+    def wrapper_accepting_parameters(para1, para2, para3):
+        function(para1, para2, para3)
+        print("I live in {}".format(para3))
+    return wrapper_accepting_parameters
+
+@decorator_with_parameters
+def print_full_name(first_name, last_name, country):
+    print("I am {} {}. I love to teach.".format(
+        first_name, last_name, country))
+print_full_name("Asabeneh", "Yetayeh",'Finland')
+
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+def change_to_upper(name):
+    return name.upper()
+names_upper_cased = map(change_to_upper, names)
+print(list(names_upper_cased))  
+
+#OR The lambda way
+names_upper_cased = map(lambda name: name.upper(), names)
+print(list(names_upper_cased))  
+
+#I have a list of strings that represent numbers: ['1', '2', '3', '4', '5']. How can I convert each of these strings into an integer so that I have a list of integers instead?"
+numbers_str = ['1', '2', '3', '4', '5']  # iterable
+numbers_int = map(int, numbers_str) #int is a built in function
+print(list(numbers_int)) 
+
+#filter
+numbers = [1, 2, 3, 4, 5] 
+def is_odd(n):
+    if n % 2 != 0:
+        return True
+    return False
+odd_numbers = filter(is_odd, numbers)
+print(list(odd_numbers))
+
+#lambda
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+long_names = filter(lambda name: len(name) > 7, names)
+print(list(long_names))
+
+odd_numbers = filter(lambda n: n % 2 == 0, numbers)
+print(list(odd_numbers))
+
+from functools import reduce
+numbers_str = ['1', '2', '3', '4', '5'] 
+total = reduce(lambda a, b: int(a) + int(b), numbers_str)
+print(total)
