@@ -169,13 +169,28 @@ print(total_num)
 
 #11. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
 country_lst = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway','Iceland']
-country_string = reduce(lambda x, y: x + "," + 'and' + y,"are north European countries", country_lst)
+country_string = reduce(lambda x, y: f"{x}, {y}",country_lst)
 print(country_string)
 
 #12.Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the countries list in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
-def categorize_countries():
-    pass
+def categorize_countries(countries, pattern):
+    return [country for country in countries if pattern.lower() in country.lower()]
 
 #13. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
+def count_countries_by_starting_letter(countries):
+    from collections import defaultdict
+
+    count_dict = defaultdict(int)
+    for country in countries:
+        first_letter = country[0].upper()
+        count_dict[first_letter] += 1
+
+    return dict(count_dict)
+
 #14. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+def get_first_ten_countries(countries):
+    return countries[:10]
+
 #15. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+def get_last_ten_countries(countries):
+    return countries[-10:]
