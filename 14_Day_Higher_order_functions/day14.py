@@ -147,5 +147,35 @@ start_with = filter(lambda a: a.startswith('E'), countries)
 print(list(start_with))
 
 #8. Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
-lst1 =  ['2', '4', '6'] 
-lst2 = ['1', '3','5'] 
+lst_1 =  [1,2,3,4,5]
+call_back = reduce(lambda x, y: x * y, map(lambda x: x ** 3, filter(lambda x: x % 2 != 0, lst_1)))
+print((call_back))
+
+lst_2 =  [1,2,3,4,5]
+call_back = reduce(lambda x, y: x + y,filter(lambda x: x % 2 != 0, map(lambda x: x ** 3, lst_1)))
+print((call_back))
+
+#9. Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
+def get_string_lists(lst):
+    return isinstance(lst,str)
+string_lst = [1, "hello", 2.5, "world", 3, True, "Python"]
+string_iterable = filter(get_string_lists, string_lst)
+print(list(string_iterable))
+
+#10. Use reduce to sum all the numbers in the numbers list.
+sum_num = [0,1,2,3,4,5,6,7,8,9,10,11]
+total_num = reduce(lambda x, y: x + y, sum_num)
+print(total_num)
+
+#11. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
+country_lst = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway','Iceland']
+country_string = reduce(lambda x, y: x + "," + 'and' + y,"are north European countries", country_lst)
+print(country_string)
+
+#12.Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the countries list in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
+def categorize_countries():
+    pass
+
+#13. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
+#14. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+#15. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
