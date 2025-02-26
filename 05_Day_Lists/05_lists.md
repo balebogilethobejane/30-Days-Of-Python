@@ -543,7 +543,7 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
 11. Add an IT company to it_companies
 12. Insert an IT company in the middle of the companies list
 13. Change one of the it_companies names to uppercase (IBM excluded!)
-14. Join the it_companies with a string '#;&nbsp; '
+14. Join the it_companies with a string
 15. Check if a certain company exists in the it_companies list.
 16. Sort the list using sort() method
 17. Reverse the list in descending order using reverse() method
